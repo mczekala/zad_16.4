@@ -1,19 +1,20 @@
-import React from 'react';
-import uuid from 'uuid';
-import style from './App.css'
-import { Title } from '../components/Title'
+import React from "react";
+import uuid from "uuid";
+import style from "./App.css";
+import { Title } from "../components/Title";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [{
-          title: 'title1',
-          id: '1'
+      data: [
+        {
+          title: "title1",
+          id: "1"
         },
         {
-          title: 'title2',
-          id: '2'
+          title: "title2",
+          id: "2"
         }
       ]
     };
@@ -21,7 +22,7 @@ class App extends React.Component {
   addTodo(val) {
     const todo = {
       text: val,
-      id: uuid.v4(),
+      id: uuid.v4()
     };
     const data = [...this.state.data, todo];
     this.setState({ data });
@@ -31,10 +32,10 @@ class App extends React.Component {
     this.setState({ data: remainder });
   }
   render() {
-    return(
+    return (
       <div className={style.TodoApp}>
-        <Title data={this.state.data}/>
-    </div>
+        <Title data={this.state.data} />
+      </div>
     );
   }
 }

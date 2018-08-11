@@ -1,4 +1,9 @@
-import React from 'react';
-export const Title = (props) => props.data.map(function(item) {
-  return <h1 key={item.id}>{item.title}</h1>;
-})
+import React from "react";
+export const Title = props => {
+    return <div >
+        <
+        h1 > TODO APP: {
+            props.data.length
+        } < /h1> < /
+    div >
+};
